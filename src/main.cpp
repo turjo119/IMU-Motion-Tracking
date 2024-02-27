@@ -52,30 +52,30 @@ ICM_20948_I2C imu; // create an ICM_20948_I2C object imu;
 
 //Gyro default scale 250 dps. Convert to radians/sec subtract offsets
 float Gscale = (M_PI / 180.0) * 0.00763; //250 dps scale sensitivity = 131 dps/LSB
-float G_offset[3] = {-272.4, 151.6, -33.0};
+float G_offset[3] = {36.5, 65.8, -46.2};
 
 //Accel scale: divide by 16604.0 to normalize
 float A_B[3]
-{   0.015727,  -0.017196,  0.009370};
+{   0.020915,  -0.018836,  -0.030144};
 
 float A_Ainv[3][3]
-{ {  0.995653,  0.000053, -0.004894},
-  {  0.000053,  0.998401, 0.000520},
-  { -0.004894, 0.000520,  0.990318}
+{ {  1.004752,  0.012259, 0.012313},
+  {  0.012259,  1.002487, 0.004673},
+  { 0.012313, 0.004673,  0.961464}
 };
 
 //Mag scale divide by 369.4 to normalize
 float M_B[3]
-{ -47.379585,  20.823855, 129.166039};
+{ 12.541804,  0.459038, 44.037736};
 
 float M_Ainv[3][3]
-{ {  1.277889, -0.020340,  -0.056127},
-  { -0.020340,  1.098952,  0.022785},
-  {  -0.056127,  0.022785,  1.127524}
+{ {  1.061172, 0.016141,  -0.0067047},
+  { 0.016141,  0.930478,  -0.002444},
+  {  -0.006704,  -0.002444,  1.001498}
 };
 
 // local magnetic declination in degrees
-float declination = 3.3;
+float declination = 3.6;
 
 // These are the free parameters in the Mahony filter and fusion scheme,
 // Kp for proportional feedback, Ki for integral
