@@ -327,12 +327,13 @@ void loop()
     q2.concat("|");
     q3.concat(q[3]);
     q3.concat("|");
-    // ax.concat(x);
-    // ax.concat("|");
-    // ay.concat(y);
-    // ay.concat("|");
-    // az.concat(z);
-    // az.concat("|");
+    // dummy linear acceleration values
+    ax.concat(1.0);
+    ax.concat("|");
+    ay.concat(1.0);
+    ay.concat("|");
+    az.concat(1.0);
+    az.concat("|");
     // gravX.concat(grav_x);
     // gravX.concat("|");
     // gravY.concat(grav_y);
