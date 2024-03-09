@@ -40,3 +40,10 @@
 
 
 #### Once everything has been set in the main script, the sensor is ready to be used for data collection. The sensor is placed in the desired location and the main script is run. The sensor will then collect the raw data and apply the calibration to provide accurate orientation data.
+
+
+# TRIPLEADAPT IMU VISUALIZATION MATLAB APP 
+ 
+ Go to **IMU_Visualization_MATLAB_app\for_testing** and run the **IMU_Visualization_MATLAB_app\for_testing** to launch the MATLAB desktop standalone app. Tu run the application, you require the MATLAB compiler found [here](https://de.mathworks.com/products/compiler/matlab-runtime.html) .Required version is R2023a(9.14).
+
+ The app requires a csv file containing gyroscope and accelorometer readings and generates an animation plot of the IMU sensor data along with 2D plots for various sensor readings. The data for linear acceleration(gravity subtracted), linear velocity and linear positon data into seperate csv files. Highpass filtered (HPF) data for linear velocity and position are also generated to remove drift.
