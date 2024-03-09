@@ -47,7 +47,7 @@
 ICM_20948_I2C imu; // create an ICM_20948_I2C object imu;
 
 // VERY IMPORTANT!
-//These are the previously determined offsets and scale factors for accelerometer and magnetometer, using MPU9250_cal and Magneto
+//These are the previously determined offsets and scale factors for accelerometer and magnetometer
 //The compass will NOT work well or at all if these are not correct
 
 //Gyro default scale 250 dps. Convert to radians/sec subtract offsets
@@ -93,9 +93,11 @@ unsigned long lastPrint = 0; // Keep track of print time
 static float q[4] = {1.0, 0.0, 0.0, 0.0};
 static float yaw, pitch, roll; //Euler angle output
 
+
 // Function prototypes
 void get_scaled_IMU(float Gxyz[3], float Axyz[3], float Mxyz[3]);
 void MahonyQuaternionUpdate(float ax, float ay, float az, float gx, float gy, float gz, float mx, float my, float mz, float deltat);
+
 
 /* SERVER SETUP*/
 
